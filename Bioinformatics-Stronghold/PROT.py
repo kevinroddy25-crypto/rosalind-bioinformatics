@@ -48,7 +48,7 @@ def get_protein_from_codon(codons):
 codons = convert_mrna_to_codons(s)
 proteins = get_protein_from_codon(codons)
 
-# Because the output will be long, create a new file to house output.
-with open('Rosalind Info/Bioinformatics Stronghold/problem_8_output.txt', 'w') as f:
+# Because the output will be long, create a new file to house output. Adjust file path as necessary.
+with open('path/to/your/rosalind_prot_output.txt', 'w') as f:
     f.write('The encoded protein string is: \n')
     f.write(proteins)
