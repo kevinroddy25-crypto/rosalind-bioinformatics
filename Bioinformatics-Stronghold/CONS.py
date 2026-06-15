@@ -65,8 +65,8 @@ for i in range(string_len):
     
     consensus.append(best_base)
 
-# Print the consensus and profile matrix in a separate file.
-with open('Rosalind Info/Bioinformatics Stronghold/problem_10_output.txt', 'w') as f:
+# Print the consensus and profile matrix in a separate file. Adjust file path as necessary.
+with open('path/to/your/rosalind_cons_output.txt', 'w') as f:
     # Write consensus.
     f.write(''.join(consensus) + '\n')
 
