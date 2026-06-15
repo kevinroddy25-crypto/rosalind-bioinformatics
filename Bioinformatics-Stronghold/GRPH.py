@@ -1,6 +1,6 @@
 # Problem 12: Overlap Graphs.
 
-# Distill given file into dictionary of fasta IDs and corresponding strings.
+# Distill given file into dictionary of fasta IDs and corresponding strings. Adjust as necessary.
 file_path = 'path/to/your/rosalind_grph.txt'
 
 with open(file_path, 'r') as f:
@@ -26,8 +26,9 @@ for line in lines:
 for label in fasta_dict:
     fasta_dict[label] = "".join(fasta_dict[label])
 
-# Iterate using .items() to keep track of both the FASTA ID (key) and the sequence (value)
-f = open('Rosalind Info/Bioinformatics Stronghold/problem_12_output.txt', 'w')
+# Iterate using .items() to keep track of both the FASTA ID (key) and the sequence (value).
+# Adjust file path as necessary.
+f = open('path/to/your/rosalind_grph_output.txt', 'w')
 
 for id1, seq1 in fasta_dict.items():
     for id2, seq2 in fasta_dict.items():
