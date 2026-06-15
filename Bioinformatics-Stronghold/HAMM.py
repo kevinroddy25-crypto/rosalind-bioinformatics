@@ -1,3 +1,5 @@
+# Problem 6: Counting Point Mutations.
+
 # Given: Two DNA strings s1 and s2 of equal length (not exceeding 1 kbp).
 # Adjust file path as necessary.
 file_path = 'path/to/your/rosalind_hamm.txt'
