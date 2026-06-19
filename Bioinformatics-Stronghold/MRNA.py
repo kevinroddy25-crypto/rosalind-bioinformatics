@@ -1,4 +1,5 @@
 # Problem 17: Inferring mRNA from protein.
+# One file path, adjust as necessary.
 
 # Objective: return the total number of different RNA strings
 # that code for a given protein string, modulo 10^6.
@@ -43,8 +44,8 @@ def get_num_rna_configurations(protein):
 
     return num_configurations
 
-# Get protein from Rosalind file.
-file_path = 'Rosalind Info/Bioinformatics Stronghold/rosalind_mrna.txt'
+# Get protein from Rosalind file. Adjust file path as necessary.
+file_path = 'path/to/your/rosalind_mrna.txt'
 with open(file_path, 'r') as f:
     prot = f.readline().strip()
 
