@@ -1,4 +1,5 @@
 # Problem 21: Locating Restriction Sites.
+# Uses one file path; adjust as necessary.
 
 # Given a DNA string of length at most 1 kbp in FASTA format.
 # Return the position and length of every reverse palindrome
@@ -11,7 +12,7 @@ def find_restriction_sites(dna_string: str):
     n = len(dna_string)
 
     # Reverse palindromes must have an even length.
-    # Therefore, the center is always BETWEEN two indices: i and i + 1.
+    # Therefore, the center is always between two indices: i and i + 1.
     for i in range(n - 1):
         left = i
         right = i + 1
@@ -23,13 +24,13 @@ def find_restriction_sites(dna_string: str):
             if base_complements[dna_string[left]] == dna_string[right]:
                 current_length += 2
                 
-                # Check if this valid reverse palindrome falls within our 4-12 bp window
+                # Check if this valid reverse palindrome falls within the 4-12 bp window
                 if 4 <= current_length <= 12:
                     # Rosalind format demands: 1-based start position and the length
                     start_position = left + 1 
                     results.append((start_position, current_length))
                 
-                # If we hit the maximum size of 12, stop expanding this center
+                # If the maximum size of 12 is hit, stop expanding this center
                 if current_length == 12:
                     break
                     
@@ -39,12 +40,12 @@ def find_restriction_sites(dna_string: str):
                 # The moment a complement match breaks, no larger palindrome can exist here
                 break
 
-    # Rosalind usually expects the output ordered by position, then by length
+    # Rosalind wants the output ordered by position, then length.
     results.sort(key=lambda x: (x[0], x[1]))
     return results
 
-# 2. Parse the given FASTA file and store string.
-file_path = 'Rosalind Info/Bioinformatics Stronghold/rosalind_revp.txt'
+# 2. Parse the given FASTA file and store the string. Adjust file path as necessary.
+file_path = 'path/to/your/rosalind_revp.txt'
 with open(file_path, 'r') as f:
     lines = f.readlines()
 
@@ -60,4 +61,4 @@ dna_sequence = ''.join(string_parts)
 restriction_sites = find_restriction_sites(dna_sequence)
 
 for pos, length in restriction_sites:
-    print(f"{pos} {length}")
+    print(f'{pos} {length}')
