@@ -23,7 +23,7 @@ def get_expected_dominant_offspring(couples):
       return e
 
 # 2. Parse file for couple data AA-AA through aa-aa. Adjust file path as necessary.
-file_path = 'Rosalind Info/Bioinformatics Stronghold/rosalind_iev.txt'
+file_path = 'path/to/your/rosalind_iev.txt'
 with open(file_path, 'r') as f:
       couples = f.readline().split(' ')
 
