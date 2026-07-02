@@ -1,4 +1,4 @@
-# Problem 23: Enumerating k-mers Lexographically.
+# Problem 23: Enumerating k-mers Lexicographically.
 # Uses one file path. Adjust as necessary.
 import itertools
 
